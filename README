@@ -5,10 +5,7 @@ Usage:
 
 The application downloads all the files in the thread to the folder out.
 
-First use:
-The url-extractor must be compiled before use, this is done by running make
-
 Dependencies:
 wget
-gcc (compilation only)
+gcc
 
