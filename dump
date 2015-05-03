@@ -1,0 +1,12 @@
+#!/bin/bash
+wget -O webpage "$1"
+./find_images < webpage > urls_unsorted
+rm webpage
+rm -f out/*
+sort -u urls_unsorted > urls
+rm urls_unsorted
+cd out
+xargs -0 -n 1 wget < <(tr \\n \\0 <../urls)
+cd ..
+rm urls
+
