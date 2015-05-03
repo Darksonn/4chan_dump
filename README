@@ -3,4 +3,4 @@ This is a tool for downloading all files in a 4chan thread
 Usage:
     ./dump url
 
-The url-extractor must be compiled before use, this is done by running `make`
+The url-extractor must be compiled before use, this is done by running make
