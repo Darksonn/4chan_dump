@@ -9,7 +9,6 @@ int main(void) {
   int r = 0, ei = 0, i;
   while ((c = getchar()) != EOF) {
     char e = expected[ei++];
-    //fprintf(stderr, "read: %c, expected %d, ei %d, r %d\n", c, (int) e, ei, r);
     if (e == 0) {
       url[r - 1] = 0;
       printf("%s\n", url);
