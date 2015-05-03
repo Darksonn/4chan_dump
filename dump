@@ -1,8 +1,21 @@
 #!/bin/bash
+if [ $# -ne 1 ]; then
+  printf "Usage: ./dump url\n"
+  exit 1
+fi
+
+make
+
+rmdir --ignore-fail-on-non-empty ./out > /dev/null 2>&1
+if [ -d "./out" ]; then
+  printf "./out not empty\n"
+  exit 1
+fi
+
 wget -O ./webpage "$1"
 ./find_images < ./webpage > ./urls_unsorted
 sort -u ./urls_unsorted > ./urls
-rm -rf -- ./out ./webpage ./urls_unsorted
+rm -f -- ./webpage ./urls_unsorted
 mkdir ./out
 cd ./out
 xargs -0 -n 1 wget < <(tr \\n \\0 <../urls)
