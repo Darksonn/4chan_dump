@@ -4,3 +4,8 @@ Usage:
     ./dump url
 
 The url-extractor must be compiled before use, this is done by running make
+
+Dependencies:
+wget
+gcc (compilation only)
+
