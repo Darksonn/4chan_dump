@@ -1,4 +1,4 @@
-This is a tool for downloading all files in a 4chan thread
+This is a linux tool for downloading all files in a 4chan thread
 
 Usage:
     ./dump url
